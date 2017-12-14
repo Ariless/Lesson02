@@ -10,7 +10,7 @@ public class MainApp {
 				x[i] = rn.nextInt(x.length)+ 1;
 			}
 			
-			for (int i = 0; i <100; i++) {
+			for (int i = 0; i < x.length; i++) {
 				System.out.println(x[i]);
 			}
 
