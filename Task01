@@ -1,0 +1,15 @@
+public class MainApp {
+
+	public static void main(String[] args) {
+  
+//1. Заполнить массив x целыми числами и вывести содержимое массива x на экран
+
+		int[] x = new int[10];
+		for (int i = 0; i < x.length; i++) {
+			x[i] = i + 1;
+		}
+		for (int i = 0; i < x.length; i++)
+			System.out.println(x[i]);
+	}
+
+}
