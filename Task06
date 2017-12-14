@@ -1,0 +1,24 @@
+
+import java.util.Random;
+
+public class MainApp {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		int odd = 0;
+		int even = 0;
+		int[] x = new int[10];
+		Random rn = new Random();
+
+		for (int i = 0; i < x.length; i++) {
+			x[i] = rn.nextInt(x.length) + 1;
+		}
+		;
+		for (int i = 0; i < x.length; i++) {
+			if (x[i] % 2 == 0)
+				even = even+1;		
+			else odd = odd+1;
+		}
+		System.out.println("even: " + even + ", " + " odd: " + odd);
+	}
+}
