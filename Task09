@@ -1,0 +1,13 @@
+public class Test1 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {		
+		String name = "Darya Belaya";	
+		int length = name.length( ); 
+		char[] x = new char[length];
+		for (char i = 0; i < x.length; i++) {
+		x[i] = name.charAt(i);
+		System.out.println (x[i]);	
+		}			
+	}
+}
