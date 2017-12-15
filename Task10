@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Test1 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+    
+		System.out.println("Enter your last name");    
+		String surname = sc.next();
+    
+		System.out.println("Enter your first name");    
+		String name = sc.next();
+    
+		System.out.println("Enter your patronymic");
+    String patronymic = sc.next();
+    
+		String full = surname + " " + name + " " + patronymic;
+    
+		String symbols = "Belaya Darya Viachiaslavovna";
+		int length = symbols.length();
+		char[] x = new char[28];
+    
+		for (int i = 0; i < x.length; i++) {
+			x[i] = full.charAt(i);
+			System.out.println(x[i]);
+		}
+	}
+}
