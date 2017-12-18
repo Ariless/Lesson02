@@ -1,0 +1,26 @@
+import java.util.Random;
+
+public class Test2 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		int[] x = new int[20];
+		Random rn = new Random();
+
+		for (int i = 0; i < x.length; i++) {
+			x[i] = rn.nextInt(x.length) + 1;
+		}
+		;
+		int a = 0;
+		for (int i = x.length - 1; i > 0; i--) {
+			for (int j = 0; j < i; j++) {
+				if (x[j] > x[j + 1]) {
+					a = x[j];
+					x[j] = x[j + 1];
+					x[j + 1] = a;
+				}
+			}
+			System.out.println(x[i]);
+		}
+	}
+}
