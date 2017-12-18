@@ -1,0 +1,37 @@
+import java.util.Random;
+
+public class Test1 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		int[] x = new int[100];
+		Random rn = new Random();
+
+		for (int i = 0; i < x.length; i++) {
+			x[i] = rn.nextInt(x.length) + 1;
+		}
+		;
+		int evenmax = 0;
+		int evenmin = x.length + 1;
+		int oddmax = 0;
+		int oddmin = x.length + 1;
+
+		for (int i = 0; i < x.length; i++) {
+			if (x[i] % 2 == 0) {
+				if (x[i] < evenmin)
+					evenmin = x[i];
+				if (x[i] > evenmax)
+					evenmax = x[i];
+			} else if (x[i] % 2 > 0) {
+				if (x[i] < oddmin)
+					oddmin = x[i];
+				if (x[i] > oddmax)
+					oddmax = x[i];
+			}
+			;
+		}
+		;
+		System.out.println(evenmax + ", " + evenmin);
+		System.out.println(oddmax + ", " + oddmin);
+	}
+}
