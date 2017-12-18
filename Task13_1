@@ -1,0 +1,32 @@
+import java.util.Random;
+
+public class Test1 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		int[] x = new int[20];
+		Random rn = new Random();
+		for (int i = 0; i < x.length; i++) {
+			x[i] = rn.nextInt(x.length) + 1;
+			System.out.println(x[i]);
+		}
+		;
+		for (int i = 0; i < x.length; i++) {
+			int min = x[i];
+			int min_i = i;
+			for (int j = i + 1; j < x.length; j++) {
+				if (x[j] < min) {
+					min = x[j];
+					min_i = j;
+				}
+			}
+			;
+			if (i != min_i) {
+				int a = x[i];
+				x[i] = x[min_i];
+				x[min_i] = a;
+			}
+			System.out.println(x[i]);
+		}
+	}
+}
